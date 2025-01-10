@@ -31,7 +31,7 @@ class UserSeeder extends Seeder
             $user->works()->attach($works);
         }
 
-        $owen = User::create([
+        $user = User::create([
             'name' => 'Rafael',
             'email' => 'rafael2602@gmail.com',
             'phone_number' => '000',
@@ -41,6 +41,6 @@ class UserSeeder extends Seeder
         ]);
 
         $works = WorkModel::inRandomOrder()->take(3)->pluck('id');
-        $owen->works()->attach($works);
+        $user->works()->attach($works);
     }
 }
